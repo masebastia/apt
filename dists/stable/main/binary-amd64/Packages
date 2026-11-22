@@ -31,3 +31,40 @@ Description: USB device information and driver finder for the desktop
  The interface follows the system light or dark style and is available in the
  official languages of the European countries.
 
+Package: confusb
+Architecture: all
+Version: 0.2.1-1
+Priority: optional
+Section: utils
+Maintainer: masebastia <msebastia@protonmail.com>
+Installed-Size: 1112
+Depends: gir1.2-adw-1, gir1.2-graphene-1.0, gir1.2-gtk-4.0, gir1.2-gudev-1.0, kmod, python3-gi, udev, usbutils, init-system-helpers (>= 1.52), python3:any
+Recommends: pkexec
+Suggests: flatpak, fwupd
+Filename: pool/main/c/confusb/confusb_0.2.1-1_all.deb
+Size: 178440
+MD5sum: ae3fdcc2754bdfc19cd1ce657a9a7192
+SHA1: 5c0c56617f62f42a3eabf031d2c626779c5b7e24
+SHA256: 77fcaf7660274770b33d66d2430716e973a23719c0152624f176c51a8bad6177
+SHA512: 32687ca51e49f61a30e1630b3ed6ea5106cec6b5b568a1ff029c6c087dcc38646d5e2493b7480d997781dbe33690980035cb435192f164a7ef61846959db8fa7
+Homepage: https://github.com/masebastia/confusb
+Description: USB device information and driver finder for the desktop
+ confusb watches the USB connections. The first time a device is plugged in
+ it offers (with a notification, or a window, as configured) everything the
+ system knows about it: descriptors, interfaces, kernel driver and modules,
+ device nodes, power state, udev properties, the full lsusb output and, for
+ storage drives, capacity and partitions. Known devices are not offered again,
+ and storage drives are opened with the default application.
+ .
+ It also looks for the driver and the applications needed to use the device,
+ using a built-in catalogue by USB class and manufacturer plus Debian and
+ Flatpak packages and fwupd firmware support. It shows what is already
+ installed and lets you install, open or try each application. For instance,
+ with a smart card reader it detects that pcscd is missing and offers to
+ install it.
+ .
+ The watching service is small and does not load the toolkit; the windows are
+ a separate process that leaves the memory when closed. The interface follows
+ the system light or dark style and is available in the official languages of
+ the European countries.
+
