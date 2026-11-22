@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repositorio APT de masebastia</title>
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;line-height:1.5}
+pre{background:#0a1120;color:#e6edf3;padding:1rem;border-radius:8px;overflow:auto}</style></head>
+<body><h1>Repositorio APT de masebastia</h1>
+<p>Paquetes <code>.deb</code> para Debian 13 y derivadas. Aplicaciones: <a href="https://github.com/masebastia/confusb">confusb</a>.</p>
+<p>Instrucciones completas en el <a href="https://github.com/masebastia/apt#readme">README</a>. Resumen:</p>
+<pre>sudo install -d -m 0755 /usr/share/keyrings
+sudo curl -fsSL -o /usr/share/keyrings/masebastia-archive-keyring.gpg \
+    https://masebastia.github.io/apt/masebastia-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/masebastia-archive-keyring.gpg] https://masebastia.github.io/apt stable main" \
+    | sudo tee /etc/apt/sources.list.d/masebastia.list
+sudo apt update &amp;&amp; sudo apt install confusb</pre>
+<p>Huella de la clave: <code>2A3D 246B 679C B1FF 91D0 3FCD 0CD8 83ED CF15 66FA</code></p></body></html>
