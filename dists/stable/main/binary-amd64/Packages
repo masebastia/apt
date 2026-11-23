@@ -108,3 +108,43 @@ Description: USB device information and driver finder for the desktop
  the system light or dark style and is available in the official languages of
  the European countries.
 
+Package: confusb
+Architecture: all
+Version: 0.2.3-1
+Priority: optional
+Section: utils
+Maintainer: masebastia <msebastia@protonmail.com>
+Installed-Size: 1513
+Depends: gir1.2-adw-1, gir1.2-graphene-1.0, gir1.2-gtk-4.0, gir1.2-gudev-1.0, kmod, python3-gi, udev, usbutils, init-system-helpers (>= 1.52), python3:any
+Recommends: pkexec
+Suggests: adb, flatpak, fwupd
+Filename: pool/main/c/confusb/confusb_0.2.3-1_all.deb
+Size: 242272
+MD5sum: c8822bec2ba34bbd416a95a9c7f23ea8
+SHA1: 8e28f60fa61f70d4552a370213c896a2592135ea
+SHA256: fd21decd01a9d6c98b1df092a14c6bc5df60eaa6f0e0851c7ed17658c3ebe096
+SHA512: 4ba81a9c032e9884672f07d5128166730f85e94016b55bff578c34cdc801d21ae3cc1a1a60273f57dc0ddc81d6361f9a38a43393c7d483ef48e42e566cd98f1f
+Homepage: https://github.com/masebastia/confusb
+Description: USB device information and driver finder for the desktop
+ confusb watches the USB connections. The first time a device is plugged in
+ it offers (with a notification, or a window, as configured) everything the
+ system knows about it: descriptors, interfaces, kernel driver and modules,
+ device nodes, power state, udev properties, the full lsusb output and, for
+ storage drives, capacity and partitions. Known devices are not offered again,
+ and storage drives are opened with the default application.
+ .
+ For an Android phone it also reads its hardware data through adb (model,
+ Android version, processor, memory, screen, battery, storage).
+ .
+ It also looks for the driver and the applications needed to use the device,
+ using a built-in catalogue by USB class and manufacturer plus Debian and
+ Flatpak packages and fwupd firmware support. It shows what is already
+ installed and lets you install, open or try each application. For instance,
+ with a smart card reader it detects that pcscd is missing and offers to
+ install it.
+ .
+ The watching service is small and does not load the toolkit; the windows are
+ a separate process that leaves the memory when closed. The interface follows
+ the system light or dark style and is available in the official languages of
+ the European countries.
+
